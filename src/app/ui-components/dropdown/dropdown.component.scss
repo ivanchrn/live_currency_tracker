@@ -1,0 +1,57 @@
+@import '../../variables.scss';
+
+:host{
+    position: relative; 
+    margin: 20px;
+}
+    
+.dropdown-value{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px; 
+    width: inherit; 
+    height: $height; 
+    background-color: $text-color-white; 
+    color: $color-violet;
+    transition: background-color .4s, color .4s;
+    cursor: pointer;
+    .value {
+        font-weight: 600;
+        cursor: context-menu; 
+    }
+    .toggle { 
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #c77dff;
+        border-right: 2px solid black;
+        transform: rotate(45deg);
+    }
+    &:hover {
+        background-color: #4cc9f0; 
+        color: white; 
+    }
+
+}
+
+.values-list {
+    top: $height; 
+    left: 0;
+    position: absolute;
+    overflow-y: auto; 
+    height: 240px; 
+    width: 170px;
+    background-color: $text-color-white; 
+    border: none; Z-index: 3; 
+    -ms-overflow-style: none;
+    .list-item {
+        cursor: pointer;
+        justify-content: center; 
+        padding: 0; 
+        border: none; 
+        // border-bottom: black solid 1px;
+        width: inherit; 
+    }
+}

@@ -1,0 +1,86 @@
+@import '../breakpoints.scss' ;
+@import '../variables.scss' ;
+
+.colortext-cyan{
+    color: $text-color-cyan;
+}
+.colortext-info{
+    color: $text-color-info;
+}
+.container{
+    .user-msg{
+        text-align: center;
+        p{
+            color: $text-color-red;
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+    .title{
+        margin-top: 80px;
+        text-align: center;
+        color: $text-color-white;
+        h2{
+            font-weight: bold;
+            font-size: 90px;
+            @include breakpoint(lg){
+                font-size: 50px;
+            }
+            @include breakpoint(sm){
+                font-size: 40px;
+            }
+            @include breakpoint(xs){
+                font-size: 35px;
+            }
+            @include breakpoint(xxs){
+                font-size: 30px;
+            }
+        }
+        h4{
+            margin-top: 20px;
+            font-size: 60px;
+            @include breakpoint(lg){
+                font-size: 40px;
+            }
+            @include breakpoint(sm){
+                font-size: 30px;
+            }
+            @include breakpoint(xs){
+                font-size: 25px;
+            }
+            @include breakpoint(xxs){
+                font-size: 20px;
+            }
+        }
+        padding: 30px 0;
+    }
+    
+    .curr-info-tic{
+        font-size: 50px;
+        font-weight: bold;
+    }
+    
+    .curr{
+        color:#10002b;
+        margin: 40px auto;
+        font-size: 30px;
+        text-align: center;
+        width: 300px;
+        background-image: $color-gradient;
+        position: relative;
+        border: 0;
+        border-radius: 5px;
+        padding: 40px;
+        box-shadow: 10px 15px $color-blue;
+        transition: box-shadow .4s;
+        &:hover {
+            box-shadow: 30px 40px $color-blue;
+        }
+        @include breakpoint(xs){
+            margin: 20px auto;
+            font-size: 20px;
+            width: 250px;
+        }
+    }
+}

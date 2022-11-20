@@ -1,0 +1,14 @@
+<div class="dropdown-value" (click)="openDropdown()">
+    <p class="value">{{selectedValue}}</p>
+    <div 
+        class="toggle"
+        [ngStyle]="{'background-color': toggleColor}"
+    ></div>
+</div>
+<div class="values-list" *ngIf="showValueList">
+    <div 
+        class="dropdown-value list-item"        
+        *ngFor="let value of dropdownValuesList; let i=index"
+        (click)="selectValue(value)"
+    >{{value}}</div>
+</div>

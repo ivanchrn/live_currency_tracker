@@ -1,0 +1,22 @@
+<div class="menu">
+  <p>Currency <span class="colortext-cyan">Live Wall</span></p>
+</div>
+<div class="curr-inputs">
+  <app-dropdown 
+    [dropdownValuesList]="fromCurrenciesList"
+    (dropdownSelectedValue)="handleFromCurrencyChange($event)"
+  ></app-dropdown>
+
+  <app-dropdown 
+    [dropdownValuesList]="toCurrenciesList"
+    (dropdownSelectedValue)="handleToCurrencyChange($event)"
+  ></app-dropdown>
+
+  <button 
+    class="btn search-btn" 
+    (click)="searchDataByTimer()"
+    [disabled]="isCurrenciesFieldsEmpty()"
+  >Search</button>
+</div>
+
+<app-currency-exchange-list [currencyData]="filteredCurrencyData"></app-currency-exchange-list>

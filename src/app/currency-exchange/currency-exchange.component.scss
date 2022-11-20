@@ -1,0 +1,60 @@
+@import '../breakpoints.scss' ;
+@import '../variables.scss' ;
+
+
+.colortext-cyan{
+    color: $text-color-cyan;
+}
+.menu{
+    width: 100%;
+    height: 60px;
+    p {
+        font-size: 35px;
+        color: $color-pink;
+        padding: 20px;
+        text-align: center;
+    }
+}
+.curr-inputs {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    app-dropdown {
+        width: 130px;
+        @include breakpoint(sm){
+            width: 110px;
+        }
+        @include breakpoint(xs){
+            width: 80px;
+        }
+    }
+    .btn {
+        margin: 20px;
+        padding: 0 20px;
+        align-items: center;
+        color: rgb(5, 6, 45);
+        border: 0;
+        width: 140px;
+        height: 50px;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .4s, color .4s;
+        &:hover{
+            background-color: $color-cyan;
+            color: $text-color-white;
+        }
+        @include breakpoint(sm){
+            width: 110px;
+        }
+        @include breakpoint(xs){
+            width: 80px;
+            font-size: 13px;
+        }
+    }
+    .search-btn {
+        background-color: $color-pink;
+    }
+}

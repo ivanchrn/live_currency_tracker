@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="user-msg">
+        <ng-container *ngIf="showWarningMsg">
+            <p>!! Please select right pair currencies !!</p>
+          </ng-container>
+
+        <div class="curr-list" *ngIf="!showWarningMsg">
+            <ng-container *ngFor="let row of currencyData">
+                <div class="curr">
+                    <span class="curr-info-tic">{{ row.ticker | uppercase }}</span><br>
+                    <span class="curr-info"><span class="colortext-info">BID:</span> {{ row.bid | uppercase }}</span><br>
+                    <span class="curr-info"><span class="colortext-info">TIME: </span>{{ row.date | uppercase }}</span><br>
+                    <span class="curr-info"><span class="colortext-info">HIGH PRICE: </span>{{ row.high | uppercase }}</span><br>
+                    <span class="curr-info"><span class="colortext-info">LOW PRICE:</span> {{ row.low | uppercase }}</span><br>
+                    <span class="curr-info"><span class="colortext-info">OPEN: </span> {{ row.open | uppercase }}</span><br>
+                </div>
+            </ng-container>
+        </div>
+        <div class="title">
+            <h2><span class="colortext-cyan">Live Wall</span> for Currency Tracking</h2>
+            <h4>Check all the currencies <span class="colortext-cyan">lastest </span> updates</h4>
+        </div>
+    </div>
+</div>
